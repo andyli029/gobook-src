@@ -1,0 +1,2 @@
+go build -gcflags “-N -l”./paracalc
+gdb ./paracalc
