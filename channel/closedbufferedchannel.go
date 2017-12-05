@@ -12,6 +12,7 @@ func main() {
 	fmt.Printf("%d\n", <-c)
 	fmt.Printf("%d\n", <-c)
 	fmt.Printf("%d\n", <-c)
+	fmt.Printf("%d\n", <-c)
 
 	c <- 1
 }
