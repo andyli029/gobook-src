@@ -1,3 +1,4 @@
+// http://tonybai.com/2014/09/29/a-channel-compendium-for-golang/
 package main
 
 import "fmt"
