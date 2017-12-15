@@ -16,8 +16,8 @@ func main() {
 	for i := 1; i <= 10; i++ {
 		go worker(start, i)
 	}
-	//time.Sleep(2 * time.Second)
-	close(start)
 	time.Sleep(2 * time.Second)
+	close(start)
+	time.Sleep(3 * time.Second)
 	//select {} //deadlock we expected
 }

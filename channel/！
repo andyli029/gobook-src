@@ -7,19 +7,17 @@ import (
 )
 
 func worker(die chan bool) {
-	fmt.Println("Begin: This is Worker.")
-	i := 0
+	fmt.Println("Begin: This is Worker")
 	for {
-		//fmt.Printf("for again: %d.\n", i)
+
 		select {
 		//case xx：
 		//做事的分支
 		case <-die:
 			//time.Sleep(time.Second * 2)
-			fmt.Printf("Done: This is Worker:%d.\n", i)
+			fmt.Println("Done: This is Worker")
 			die <- true
 			//return
-			i++
 			break
 		}
 	}
@@ -34,7 +32,7 @@ func main() {
 	<-die
 	fmt.Println("Worker goroutine has been terminated")
 
-	die <- true
+	//die <- true
 	<-die
 	fmt.Println("Worker goroutine has been terminated2.")
 }
